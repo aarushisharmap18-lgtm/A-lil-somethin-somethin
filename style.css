@@ -1,0 +1,568 @@
+/* ========================================
+   BODY
+======================================== */
+
+body{
+
+  margin:0;
+
+  min-height:100vh;
+
+  overflow-x:hidden;
+
+  overflow-y:auto;
+
+  background:
+  linear-gradient(
+    rgba(13,19,33,0.88),
+    rgba(29,45,68,0.88),
+    rgba(62,44,35,0.92)
+  ),
+
+  url("assets/bg.png");
+
+  background-size:cover;
+
+  background-position:center;
+
+  position:relative;
+}
+
+
+
+/* ========================================
+   COZY GLOW
+======================================== */
+
+.glow{
+
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  background:rgba(255, 196, 120, 0.08);
+
+  border-radius:50%;
+
+  filter:blur(100px);
+
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%, -50%);
+
+  z-index:0;
+
+  pointer-events:none;
+}
+
+
+
+/* ========================================
+   PAPER TEXTURE
+======================================== */
+
+.texture{
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  background:url("assets/paper-texture.png");
+
+  opacity:0.04;
+
+  pointer-events:none;
+}
+
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.title{
+
+  color:#f4e1c1;
+
+  font-family:'VT323', monospace;
+
+  font-size:5rem;
+
+  text-align:center;
+
+  margin-top:40px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+
+/* ========================================
+   SUBTITLE
+======================================== */
+
+.subtitle{
+
+  text-align:center;
+
+  color:#ddb892;
+
+  font-family:'Caveat', cursive;
+
+  font-size:2rem;
+
+  margin-top:-30px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+
+/* ========================================
+   SCRAPBOOK LAYOUT
+======================================== */
+
+.scrapbook{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:flex-start;
+
+  gap:50px;
+
+  margin-top:40px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+
+
+/* ========================================
+   POLAROID
+======================================== */
+
+.polaroid{
+
+  width:250px;
+
+  background:#f4e1c1;
+
+  padding:15px 15px 60px 15px;
+
+  position:relative;
+
+  transform:rotate(-4deg);
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+  transition:0.3s;
+}
+
+.polaroid:hover{
+
+  transform:rotate(-4deg) scale(1.03);
+}
+
+.polaroid-img{
+
+  width:100%;
+}
+
+.polaroid p{
+
+  text-align:center;
+
+  font-family:'Caveat', cursive;
+
+  font-size:2rem;
+
+  color:#222;
+}
+
+
+
+/* ========================================
+   TAPE
+======================================== */
+
+.tape{
+
+  width:120px;
+
+  position:absolute;
+
+  top:-30px;
+  left:60px;
+
+  opacity:0.8;
+}
+
+
+
+/* ========================================
+   RIGHT COLUMN
+======================================== */
+
+.right-column{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:25px;
+}
+
+
+
+/* ========================================
+   STICKY NOTE
+======================================== */
+
+.note{
+
+  width:220px;
+
+  background:#d8b98d;
+
+  padding:25px;
+
+  font-family:'Caveat', cursive;
+
+  font-size:2rem;
+
+  color:#222;
+
+  transform:rotate(3deg);
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+  transition:0.3s;
+}
+
+.note:hover{
+
+  transform:rotate(3deg) scale(1.03);
+}
+
+
+
+/* ========================================
+   QUOTE STACK
+======================================== */
+
+.quote-stack{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+
+
+/* ========================================
+   SMALL QUOTES
+======================================== */
+
+.small-quote{
+
+  width:220px;
+
+  border-radius:10px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+  transform:rotate(-2deg);
+
+  transition:0.3s;
+}
+
+.small-quote:hover{
+
+  transform:rotate(-2deg) scale(1.03);
+}
+
+
+
+/* ========================================
+   QUEST PANEL
+======================================== */
+
+.quest-panel{
+
+  width:350px;
+
+  margin:70px auto;
+
+  background:rgba(0,0,0,0.35);
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter:blur(10px);
+
+  border-radius:20px;
+
+  padding:25px;
+
+  color:#f4e1c1;
+
+  font-family:'VT323', monospace;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+  position:relative;
+
+  z-index:2;
+}
+
+.quest-panel h2{
+
+  font-size:2.5rem;
+
+  margin-top:0;
+}
+
+.quest-panel ul{
+
+  list-style:none;
+
+  padding:0;
+
+  font-size:1.7rem;
+}
+
+.quest-panel li{
+
+  margin-bottom:15px;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.quest-panel li:hover{
+
+  transform:translateX(5px);
+}
+
+
+
+/* ========================================
+   XP BAR
+======================================== */
+
+.xp-bar{
+
+  width:100%;
+
+  height:20px;
+
+  background:#222;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  margin-top:20px;
+}
+
+.xp-fill{
+
+  width:100%;
+
+  height:100%;
+
+  background:#ddb892;
+}
+
+.xp-text{
+
+  font-size:1.3rem;
+}
+
+
+
+/* ========================================
+   STARS
+======================================== */
+
+.star{
+
+  position:absolute;
+
+  width:80px;
+
+  opacity:0.8;
+
+  animation:float 4s ease-in-out infinite;
+
+  z-index:2;
+}
+
+.star1{
+
+  top:50px;
+  left:60px;
+}
+
+.star2{
+
+  bottom:80px;
+  right:70px;
+}
+
+
+
+/* ========================================
+   FLOAT ANIMATION
+======================================== */
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+
+
+/* ========================================
+   SPARKLES
+======================================== */
+
+.sparkle{
+
+  position:absolute;
+
+  width:10px;
+  height:10px;
+
+  background:#f4e1c1;
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  animation:sparkleFade 0.5s linear;
+
+  z-index:999;
+}
+
+@keyframes sparkleFade{
+
+  0%{
+
+    opacity:1;
+
+    transform:scale(1);
+  }
+
+  100%{
+
+    opacity:0;
+
+    transform:scale(0);
+  }
+
+}
+
+
+
+/* ========================================
+   FLOATING HEARTS
+======================================== */
+
+.heart{
+
+  position:absolute;
+
+  color:#f4e1c1;
+
+  font-size:20px;
+
+  pointer-events:none;
+
+  animation:floatHeart linear forwards;
+
+  z-index:1;
+}
+
+@keyframes floatHeart{
+
+  0%{
+
+    transform:translateY(0);
+
+    opacity:1;
+  }
+
+  100%{
+
+    transform:translateY(-200px);
+
+    opacity:0;
+  }
+
+}
+
+
+
+/* ========================================
+   POMODORO BUTTON
+======================================== */
+
+.pomodoro-btn{
+
+  position:fixed;
+
+  top:30px;
+  right:30px;
+
+  background:#f4d35e;
+
+  color:#111;
+
+  padding:12px 22px;
+
+  border-radius:30px;
+
+  text-decoration:none;
+
+  font-family:'VT323', monospace;
+
+  font-size:1.4rem;
+
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+
+  transition:0.3s;
+
+  z-index:999;
+}
+
+.pomodoro-btn:hover{
+
+  transform:scale(1.08);
+
+  background:#ffe08a;
+}
